@@ -1,0 +1,35 @@
+@import "../styles/colors";
+
+:host {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7rem 0rem 2rem;
+  background: url("../assets/images/pattern-hills.svg") bottom no-repeat,
+    url("../assets/images/bg-stars.svg") no-repeat, $very-dark-blue;
+  background-size: contain;
+
+  @media screen and (max-width: 45rem) {
+    background-size: 300%;
+    background-position: bottom 0 right 5px;
+  }
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+app-svg-icon {
+  fill: $grayish-blue;
+
+  &:hover {
+    cursor: pointer;
+    fill: $soft-red;
+  }
+}
